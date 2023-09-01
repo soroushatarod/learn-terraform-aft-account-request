@@ -1,3 +1,6 @@
+# Copyright Amazon.com, Inc. or its affiliates. All rights reserved.
+# SPDX-License-Identifier: Apache-2.0
+#
 variable "account-request-table" {
   type        = string
   description = "name of account-request-table"
@@ -31,6 +34,7 @@ variable "change_management_parameters" {
 variable "account_tags" {
   type        = map(any)
   description = "map of account-level tags"
+  default     = {}
 }
 
 variable "custom_fields" {
@@ -41,7 +45,6 @@ variable "custom_fields" {
 
 variable "account_customizations_name" {
   type        = string
-  default     = null
+  default     = ""
   description = "The name of the account customizations to apply"
 }
-
