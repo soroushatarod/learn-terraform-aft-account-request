@@ -52,4 +52,8 @@ module "control_tower_account_audit" {
     change_requested_by = "Soroush"
     change_reason       = "Import Control Tower Accounts"
   }
+
+  custom_fields = {
+    group = "prod"
+  }
 }
