@@ -11,7 +11,13 @@ module "aft_import_root" {
   }
 
   account_tags = {
+    "Learn Tutorial" = "AFT"
   }
+
+  custom_fields = {
+    group = "management"
+  }
+
 
   change_management_parameters = {
     change_requested_by = "Account_Infra"
