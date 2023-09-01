@@ -56,4 +56,6 @@ module "control_tower_account_audit" {
   custom_fields = {
     group = "prod"
   }
+
+  account_customizations_name = "landingzone"
 }
