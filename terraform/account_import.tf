@@ -1,4 +1,4 @@
-module "aft_import_root" {
+module "account_import" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
@@ -14,15 +14,14 @@ module "aft_import_root" {
     "Learn Tutorial" = "AFT"
   }
 
-  custom_fields = {
-    group = "management"
-  }
-
-
   change_management_parameters = {
-    change_requested_by = "Account_Infra"
-    change_reason       = "Import a Sandbox account in AFT"
+    change_requested_by = "HashiCorp Learn"
+    change_reason       = "Learn AWS Control Tower Account Factory for Terraform"
   }
 
+  custom_fields = {
+    group = "non-prod"
+  }
+
+  account_customizations_name = "management"
 }
-# aws organizations list-organizational-units-for-parent --parent-id=r-z0w6
